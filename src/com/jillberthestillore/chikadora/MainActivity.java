@@ -7,11 +7,13 @@ import android.view.MenuItem;
 
 import com.jillberthestillore.chikadora.factories.FragmentFactory;
 import com.jillberthestillore.chikadora.fragments.LoginFragment;
+import com.jillberthestillore.chikadora.fragments.RegisterFragment;
 
 public class MainActivity extends Activity {
 
 	static {
 		FragmentFactory.register("login", LoginFragment.class);
+		FragmentFactory.register("register", RegisterFragment.class);
 	}
 	
 	@Override
@@ -20,7 +22,7 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		if (savedInstanceState == null) {
 			getFragmentManager().beginTransaction()
-					.add(R.id.container, FragmentFactory.create("login")).commit();
+					.add(R.id.container, FragmentFactory.create("register")).commit();
 		}
 	}
 
