@@ -97,5 +97,10 @@ public class Contact extends Model {
 	public void setId(int id) {
 		this.id = id;
 	}
+
+	@Override
+	public Model newInstance() {
+		return new Contact();
+	}
 	
 }

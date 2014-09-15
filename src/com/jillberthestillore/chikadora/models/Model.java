@@ -15,4 +15,6 @@ public abstract class Model {
 
 	public abstract int getId();
 	
+	public abstract Model newInstance();
+	
 }
